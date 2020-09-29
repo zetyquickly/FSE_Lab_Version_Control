@@ -23,13 +23,11 @@ Your task is to finish this implementation collaboratively using `git`. Also it 
 As a result there should be completed functionality that evidently built in parallel.
 
 ### QA
-1.
-**Q**: If I am the owner of the `master` branch should I create `feature` branch or it is possible for me to push it directly to the `master`
+**Q1**: If I am the owner of the `master` branch should I create `feature` branch or it is possible for me to push it directly to the `master`
 
-**A**: Ownership of the `master` branch doesn't provide you rights to push there directly if you're working on a project with a team. Each feature should be accepted with other members of the project. There's also an option in GitHub repo settings that won't give a possibility to push in `origin/master` directly
+**A1**: Ownership of the `master` branch doesn't provide you rights to push there directly if you're working on a project with a team. Each feature should be accepted with other members of the project. There's also an option in GitHub repo settings that won't give a possibility to push in `origin/master` directly
 
 
-1.
-**Q**: How to make the pull request
+**Q2**: How to make the pull request
 
-**A**: Please follow https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
+**A2**: Please follow https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
