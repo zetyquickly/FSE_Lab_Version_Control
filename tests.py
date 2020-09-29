@@ -7,7 +7,7 @@ def test_remove():
     st = Storage({'a': 1, 'b': 2})
     key = 'b'
     st.remove(key)
-    print("new dict")
+    print("new dictionary")
 
 
 def test_set():
