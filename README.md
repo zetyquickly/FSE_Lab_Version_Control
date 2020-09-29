@@ -29,4 +29,6 @@ As a result there should be completed functionality that evidently built in para
 **A**: Ownership of the `master` branch doesn't provide you rights to push there directly if you're working on a project with a team. Each feature should be accepted with other members of the project. There's also an option in GitHub repo settings that won't give a possibility to push in `origin/master` directly
 
 
+**Q**: How to make the pull request
 
+**A**: Please follow https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
