@@ -4,7 +4,11 @@ def test_add():
     pass
 
 def test_remove():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'b'
+    st.remove(key)
+    print("new dict")
+
 
 def test_set():
     pass
