@@ -7,7 +7,13 @@ def test_remove():
     pass
 
 def test_set():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'a'
+    st.set(key, 5)
+    assert st.data[key] == 5, f"Value for the key {key} has setted"
+    # key = 'c'
+    # st.set(key, 3)
+    # assert
 
 def test_get():
     st = Storage({'a': 1, 'b': 2})
