@@ -4,7 +4,10 @@ def test_add():
     pass
 
 def test_remove():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'b'
+    newst = st.remove(key)
+    assert newst.get(key) is None, "Element not deleted"
 
 def test_set():
     pass
