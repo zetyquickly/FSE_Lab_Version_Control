@@ -7,7 +7,11 @@ def test_remove():
     pass
 
 def test_set():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'a'
+    new_val = 5
+    st.set(key, new_val)
+    assert st.get(key) == new_val, "Value for the key is not equal to new value"
 
 def test_get():
     st = Storage({'a': 1, 'b': 2})
