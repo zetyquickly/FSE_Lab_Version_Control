@@ -12,11 +12,16 @@ class Storage:
         else:
             return None
 
-    def remove(self):
-        pass
+    def remove(self, key):
+        if key in self.data.keys():
+            del self.data[key]
+            return self.data
+        else:
+            raise KeyError
+
 
     def set(self):
         pass
-    
+
     def add(self):
         pass
