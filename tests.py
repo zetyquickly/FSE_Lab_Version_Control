@@ -23,7 +23,8 @@ def test_get():
     val = st.get(key)
     assert val == 2, "Value for the key {} is not equal to expected".format(key)
     key = 'c'
-    st.get(key)
+    val = st.get(key)
+    assert val is None, "Value for an unexisting key is not None"
 
 def run_tests():
     test_add()
