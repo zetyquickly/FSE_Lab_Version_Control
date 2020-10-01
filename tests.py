@@ -1,7 +1,13 @@
 from storage import Storage
 
 def test_add():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'c'
+    val = 3
+    st.add(key,val)
+    assert key in st.data.keys(),"Key is not in storage's keys"
+    if key in st.data.keys():
+        assert val == st.data[key], "Added value for the key is not correct"
 
 def test_remove():
     pass
