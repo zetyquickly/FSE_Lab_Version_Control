@@ -17,7 +17,7 @@ Your task is to finish this implementation collaboratively using `git`. Also it 
 1. You are divided into several teams. One member of each team should `fork` this repository. Add your teammates as `contributors`
 1. Team members decide on which functionality they will implement (i.e. method under `storage.py` and a corresponding test under `tests.py`)
 1. After that, members clone forked repository, create a `branch` with a name `feature/add` (or `remove`, or `set`), implement this functionality under that branch
-1. When the functionality is implemented and tested locally push it to the `remote` and open `pull request` to the `master` branch
+1. When the functionality is implemented and tested locally push it to the `remote` and open `pull request` to the `master` branch of the `fork` from the first item
 1. Other teammates not involved in realization of this very feature are asked to review `pull request` and give a positive feedback under the comments if it's OK. After that, owner of `master` branch merges all these features into `master`
 
 As a result there should be completed functionality that evidently built in parallel.
