@@ -3,7 +3,7 @@
 This repository is an implementation of very simple storage based on Python dictionary.
 
 The storage supports four operations:
-* **add**: adds `<key,value>` into storage,
+* **add**: adds `<key,value>` into storage, if the `key` is present raise an `Exception`
 * **get**: returns a `value` for a given `key` or `None` if no such `key`,
 * **remove**: removes `<key,value>` pair based on `key`,
 * **set**: sets a new `value` for a given `key` if the `key` is present
