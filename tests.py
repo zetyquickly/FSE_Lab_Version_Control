@@ -7,7 +7,20 @@ def test_remove():
     pass
 
 def test_set():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'b'
+    val = 3
+    st.set(key,val)
+    assert st.data[key] == val, "Value for the key {} was not changed".format(key) 
+    key = 'c'
+    val = 4
+    try:
+        st.set(key,val)
+    except KeyError as e:
+        pass
+    else:
+        assert True  == False, "Keyerror exception was not raised for invalid key"
+
 
 def test_get():
     st = Storage({'a': 1, 'b': 2})
