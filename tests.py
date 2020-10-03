@@ -1,7 +1,20 @@
+import unittest
+
 from storage import Storage
 
 def test_add():
-    pass
+    st = Storage({})
+    key_1,value_1 = 'a',1
+    st.add(key_1,value_1)
+    assert key_1 in st.data.keys(), "Pair not added"
+    assert st.data[key_1] == value_1,"Added wrong value"
+    try:
+        st.add(key_1,value_1)
+    except KeyError as e:
+        pass
+    else:
+        assert True == False, "Exeption about existing key not raised"
+
 
 def test_remove():
     pass
