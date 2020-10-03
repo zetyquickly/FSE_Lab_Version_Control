@@ -4,7 +4,16 @@ def test_add():
     pass
 
 def test_remove():
-    pass
+    st = Storage({'a':1, 'b':2})
+    key = 'a'
+    st.remove(key)
+    assert key not in st.data, f"Value for the key {key} wasn't removed "
+    key = 'c'
+
+    try:
+        st.remove(key)
+    except Exception as e:
+        assert True
 
 def test_set():
     pass
