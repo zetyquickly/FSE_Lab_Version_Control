@@ -1,7 +1,14 @@
 from storage import Storage
 
 def test_add():
-    pass
+    st = Storage({'a':1, 'b':2})
+    key = 'c'
+    val = 3
+    try:
+        st.add(key, val)
+    except KeyError as identifier:
+        print("Value {} wasn't added to storage".format(val))
+    assert st.data[key] == val, "Wrong value added for key {}".format(key)
 
 def test_remove():
     pass
