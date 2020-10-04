@@ -13,7 +13,8 @@ class Storage:
             return None
 
     def remove(self):
-        pass
+        if key in self.data:
+             del self.data[key]
 
     def set(self):
         pass
