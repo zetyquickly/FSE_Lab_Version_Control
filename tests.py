@@ -1,7 +1,12 @@
 from storage import Storage
 
 def test_add():
-    pass
+    st=Storage()
+    st.add('a', 1)
+    if st.get('a')!=1:
+        print("Error! Test failed")
+    else:
+        print("Test is ok")
 
 def test_remove():
     pass
