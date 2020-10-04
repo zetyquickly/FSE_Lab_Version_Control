@@ -1,7 +1,15 @@
 from storage import Storage
 
 def test_add():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'c'
+    value = 5
+    st.add(key, value)
+    assert st.get(key) == 5, "Element is not added"
+    key = 'b'
+    value = 4
+    st.add(key, value)
+    assert st.get(key) == 2, "Element was set"
 
 def test_remove():
     pass
