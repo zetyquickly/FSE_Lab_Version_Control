@@ -14,15 +14,15 @@ class Storage:
 
     def remove(self):
         pass
-
-    def set(self, key, value):
-        if key in self.data:
-            self.data[key] = value
-        else:
-            return None
     
     def add(self,key,value):
         if key not in self.data.keys():
             self.data[key] = value
         else:
             raise Exception(f'Key "{key}" is already here')
+    
+    def set(self, key, value):
+        if key in self.data:
+            self.data[key] = value
+        else:
+            return None
