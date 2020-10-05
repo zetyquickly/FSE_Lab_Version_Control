@@ -1,8 +1,18 @@
 from storage import Storage
 
 def test_add():
-    pass
-
+    st = Storage({'a': 1, 'b': 2})
+    key = 'c'
+    val = 3
+    st.add(key,val)
+    if st.data['c'] != 3:
+        return 1
+    key = 'a'
+    try:
+        st.add(key,val)
+    except Exception:
+        return 0
+    return 1
 def test_remove():
     pass
 
