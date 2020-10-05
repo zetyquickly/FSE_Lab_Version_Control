@@ -13,8 +13,22 @@ def test_add():
     except Exception:
         return 0
     return 1
+
 def test_remove():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key1 = 'b'
+    key2 = 'c'
+    try:
+        st.remove(key1)
+    except Exception:
+        return 0
+    try:
+        st.remove(key2)
+    except Exception:
+        return 0
+    return 1
+    
+    
 
 def test_set():
     pass
