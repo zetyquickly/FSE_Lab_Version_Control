@@ -23,3 +23,9 @@ class Storage:
             self.data[key] = value
         else:
             raise Exception(f'Key "{key}" is already here')
+    
+    def set(self, key, value):
+        if key in self.data:
+            self.data[key] = value
+        else:
+            return None
