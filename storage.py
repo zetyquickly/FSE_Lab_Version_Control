@@ -14,9 +14,6 @@ class Storage:
 
     def remove(self):
         pass
-
-    def set(self):
-        pass
     
     def add(self,key,value):
         if key not in self.data.keys():
