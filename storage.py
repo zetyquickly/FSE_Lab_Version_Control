@@ -19,4 +19,7 @@ class Storage:
         pass
     
     def add(self,key,value):
-        self.data[key] = value
+        if key not in self.data.keys():
+            self.data[key] = value
+        else:
+            raise Exception(f'Key "{key}" is already here')

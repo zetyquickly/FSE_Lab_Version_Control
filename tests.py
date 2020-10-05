@@ -5,10 +5,14 @@ def test_add():
     key = 'c'
     val = 3
     st.add(key,val)
-    assert key in st.data.keys(),"Key is not in storage's keys"
-    if key in st.data.keys():
-        assert val == st.data[key], "Added value for the key is not correct"
-
+    if st.data['c'] != 3:
+        return 1
+    key = 'a'
+    try:
+        st.add(key,val)
+    except Exception:
+        return 0
+    return 1
 def test_remove():
     pass
 
