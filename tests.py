@@ -5,7 +5,7 @@ def test_add():
     
     key, val = 'c', 3
     st.add(key, val)
-    assert st[key] == val, "Value for the key {} is not equal to excepted".format(key)
+    assert st.get(key) == val, "Value for the key {} is not equal to excepted".format(key)
 
     key, val = 'b', 20
     try:
