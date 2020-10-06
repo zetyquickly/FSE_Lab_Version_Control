@@ -12,11 +12,8 @@ class Storage:
         else:
             return None
 
-    def remove(self, key):
-        if key in self.data:
-            del self.data[key]
-        else:
-            return 'Key not exist'
+    def remove(self):
+        pass
 
     def set(self):
         pass
