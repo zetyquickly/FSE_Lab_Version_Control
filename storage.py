@@ -15,7 +15,7 @@ class Storage:
     def remove(self, key):
         if key in self.data:
         	del self.data[key]
-        	return self.data
+        	return self
         else:
         	raise KeyError("key not found")
 
