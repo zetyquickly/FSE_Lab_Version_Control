@@ -5,7 +5,7 @@ def test_add():
 
 def test_remove():
     st = Storage({'a': 1, 'b': 2})
-    key = 'a'
+    key = 'b'
     rem = st.remove(key)
     assert rem is None, "Key {} is not removed".format(key)
     key = 'c'
