@@ -1,13 +1,33 @@
 from storage import Storage
 
 def test_add():
-    pass
+    st=Storage()
+    st.add('a', 1)
+    assert st.get('a')!=1, "Value for the key {} does not exist"
+
 
 def test_remove():
-    pass
+    db = Storage({'a': 1, 'b': 2})
+    key = 'a'
+    db.remove(key)
+    val = st.get(key)
+    assert val is None, "The <key,value> pair hasn't been removed"
+    key = 'с'
+    try:
+        db.remove(key)
+    except KeyError:
+        pass
+    else:
+        raise Exception
 
 def test_set():
-    pass
+    db = Storage({'a': 1, 'b': 2})
+    key = 'b'
+    val = db.get(key)
+    assert val == 2, "Value for the key {} is not equal to expected".format(key)
+    key = 'c'
+    val = db.get(key)
+    assert val is None, "Value for an unexisting key is not None"
 
 def test_get():
     st = Storage({'a': 1, 'b': 2})
