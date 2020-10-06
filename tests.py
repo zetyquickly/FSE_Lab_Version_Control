@@ -21,7 +21,7 @@ def test_remove():
     try:
         st.remove(key)
     except KeyError:
-        print("key not exist")
+        assert True
 
 def test_set():
     st = Storage({'a' : 1, 'b' : 2})
