@@ -31,7 +31,13 @@ def test_remove():
     
 
 def test_set():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'b'
+    st.set(key, 3)
+    assert st.get(key) == 3
+    key = 'c'
+    val = st.set(key, 4)
+    assert val is None
 
 def test_get():
     st = Storage({'a': 1, 'b': 2})

@@ -17,12 +17,15 @@ class Storage:
             del self.data[key]
         else:
             raise Exception(f'Key "{key}" does not belong to dictionary')
-
-    def set(self):
-        pass
     
     def add(self,key,value):
         if key not in self.data.keys():
             self.data[key] = value
         else:
             raise Exception(f'Key "{key}" is already here')
+    
+    def set(self, key, value):
+        if key in self.data:
+            self.data[key] = value
+        else:
+            return None
