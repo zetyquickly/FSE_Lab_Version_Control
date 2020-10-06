@@ -18,5 +18,10 @@ class Storage:
     def set(self):
         pass
     
-    def add(self):
-        pass
+    def add(self, key, value):
+        if key in self.data:
+            #print('Value error, ', key, ' is already in the Storage')
+            raise Exception
+        else:
+            self.data[key] = value
+        return self.data
