@@ -1,7 +1,10 @@
 from storage import Storage
 
 def test_add():
-    pass
+    st=Storage()
+    st.add('a', 1)
+    assert st.get('a')!=1, "Value for the key {} does not exist"
+
 
 def test_remove():
     db = Storage({'a': 1, 'b': 2})
