@@ -7,7 +7,16 @@ def test_remove():
     pass
 
 def test_set():
-    pass
+    st = Storage({'a' : 1, 'b' : 2})
+    key = 'b'
+    new_value = 3
+    st.set(key, new_value)
+    assert st.get(key) == new_value, "Fail"
+    key = 'c'
+    try:
+        st.set(key, new_value)
+    except Exception:
+        assert True
 
 def test_get():
     st = Storage({'a': 1, 'b': 2})
