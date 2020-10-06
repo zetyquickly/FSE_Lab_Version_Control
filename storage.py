@@ -18,5 +18,9 @@ class Storage:
     def set(self):
         pass
     
-    def add(self):
-        pass
+    def add(self, key, value):
+        if key not in self.data:
+            self.data[key] = value
+        else:
+            raise Exception(f'Storage already has key {key}, first remove it')
+        
