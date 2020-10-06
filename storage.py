@@ -12,8 +12,11 @@ class Storage:
         else:
             return None
 
-    def remove(self):
-        pass
+    def remove(self, key):
+        if key in self.data:
+            value = self.data.pop(key)
+        else:
+            raise Exception(f"Key {key} don't exist")
 
     def set(self):
         pass
