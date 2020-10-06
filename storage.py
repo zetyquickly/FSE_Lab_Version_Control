@@ -12,14 +12,15 @@ class Storage:
         else:
             return None
 
-    def remove(self):
-        pass
-
-    def set(self):
-        pass
-    
-    def add(self, key, value):
+    def remove(self, key):
         if key in self.data:
-          raise KeyError("Key already exists")
+        	del self.data[key]
+        	return self
         else:
-          self.data[key] = value
+        	raise KeyError("key not found")
+
+    def set(self, key, value):
+        if key in self.data:
+            self.data[key] = value
+        else: raise Exception
+    
