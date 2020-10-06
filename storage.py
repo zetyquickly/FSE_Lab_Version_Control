@@ -24,5 +24,3 @@ class Storage:
             self.data[key] = value
         else: raise Exception
     
-    def add(self):
-        pass
