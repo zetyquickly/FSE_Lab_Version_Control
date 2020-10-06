@@ -4,7 +4,13 @@ def test_add():
     pass
 
 def test_remove():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'b'
+    rem = st.remove(key)
+    assert rem is None, "Key {} is not removed".format(key)
+    key = 'c'
+    rem = st.remove(key)
+    assert rem == "Key not exist", "Removing unexisting key provide wrong answer"
 
 def test_set():
     st = Storage({'a': 1, 'b': 2})
