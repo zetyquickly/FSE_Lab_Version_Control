@@ -4,7 +4,18 @@ def test_add():
     pass
 
 def test_remove():
-    pass
+    db = Storage({'a': 1, 'b': 2})
+    key = 'a'
+    db.remove(key)
+    val = st.get(key)
+    assert val is None, "The <key,value> pair hasn't been removed"
+    key = 'с'
+    try:
+        db.remove(key)
+    except KeyError:
+        pass
+    else:
+        raise Exception
 
 def test_set():
     pass
