@@ -19,10 +19,24 @@ def test_add():
 
 
 def test_remove():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key = 'b'
+    rem = st.remove(key)
+    assert rem is None, "Key {} is not removed".format(key)
+    key = 'c'
+    rem = st.remove(key)
+    assert rem == "Key not exist", "Removing unexisting key provide wrong answer"
 
 def test_set():
-    pass
+    st = Storage({'a': 1, 'b': 2})
+    key, value = 'b', 3
+    st.set(key, value)
+    val = st.get(key)
+    assert val == 3, "Value for the key {} is not equal to expected".format(key)
+    key = 'c'
+    st.set(key, value)
+    val = st.get(key)
+    assert val is None, "Value for an unexisting key is not None"
 
 def test_get():
     st = Storage({'a': 1, 'b': 2})
