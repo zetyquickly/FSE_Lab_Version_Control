@@ -6,8 +6,12 @@ def test_add():
 def test_remove():
     st = Storage({'a': 1, 'b': 2})
     key = 'b'
-    newst = st.remove(key)
-    assert newst.get(key) is None, "Element not deleted"
+    st = st.remove(key)
+    assert st.get(key) is None, "Element not deleted"
+    try:
+        st.remove(key)
+    except KeyError:
+        print("key not exist")
 
 def test_set():
     pass
